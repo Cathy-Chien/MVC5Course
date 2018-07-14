@@ -14,10 +14,12 @@ namespace MVC5Course.Models
     
     public partial class Occupation
     {
+    	partial void Init();
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Occupation()
         {
             this.Client = new HashSet<Client>();
+    		this.Init();
         }
     
         public int OccupationId { get; set; }
